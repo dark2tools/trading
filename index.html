@@ -4,7 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="style.css">
-
+<script>
+  window.addEventListener("mouseover",play);
+window.addEventListener("click",play);
+function play() { document.getElementById("a").play();
+}
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <html lang="en" dir="ltr">
    <head>
@@ -22,7 +27,7 @@ body{
   font-family: sans-serif;
   overflow: hidden;
   user-select: none;
-  background-color:#f032e6;
+  background-color:green;
   background-image: url('https://i.gifer.com/U1c.gif');
   max-height: 100%;
   min-height: 100vh;
@@ -269,17 +274,63 @@ color: white;
 h3{
   color: red;
   font-size: 20px;
-  
-}  
+  m
+} 
+        .full{
+            color:white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height:100vh;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH8e19ONejz58uMdf5qrl7Fi02A5071riPjW-DopG6rBs8ooI2H1jtuP-nw-_ImPSAPD8&usqp=CAU");
+        }    
+        .head{
+            
+    text-align: center;
+
+        }
+        .email{
+            display:none;
+        }
+        
+           h1 {
+  position: relative;
+  color: black;
+  font-size: 20px;
+  letter-spacing: 1px;
+  border-bottom: 5px solid black;
+  line-height: 1.4;
+  font-family: Console;
+}
+h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: 
+  width: 100%;
+  color: #30FF00;
+  border-bottom: 5px solid #30FF00;
+  animation: lod 8s linear infinite;
+  overflow: hidden;
+}
+@keyframes lod {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}     
       </style>
    </head>
    <script>
-     alert(" Welcome To DarkTools ");
-      alert(" Hi, Hacker eXplorer ");
+    alert(" Welcome to DarkTools "); 
+    alert(" Join on Telegram group");
    </script>
      <body>
 
-<pre>            <a style="color: white" href="index.html">        -DARK EYE-  </a></pre>
+
+<pre> <a style="color: white" href="index.html"> -DARKTOOLS- </a></pre>
 <br><br><br>
       <nav>
       
@@ -312,7 +363,7 @@ h3{
                <li><a href="like.html"> 𝙵𝙱 𝙻𝚒𝚔𝚎</a></li>
         
             <li><a style="color: white" href="Paid.html">Paid [website]</a></a></li>
-                  <li><a href="https://t.me/joinchat/iJM3riwN2w4zOTg1">watch video</a>  </a></li>
+                  <li><a href="https://t.me/joinchat/iJM3riwN2w4zOTg1">watch video</a> </a></li>
       <li><a href="telbot.html">Telegram bot</a></li>
       <li><a href="coin-Bird.html">Coin-Bird</a></li>
       <li><a href="Binomo.html">Binomo</a></li>
@@ -335,8 +386,8 @@ h3{
           <div>
     <br />
     </pre>
-    <br><br>   <br><br>   <br><br>
-       <br><br>   <br><br>   <br><br>   <br><br>   <br><br><br>
+    <br><br> <br><br> <br><br>
+       <br><br> <br><br> <br><br> <br><br> <br><br><br>
        
        
        <h3>* Contact About :-</h3>
@@ -347,10 +398,59 @@ h3{
  
     
   </ul>
-  <br>
-
+  <br><br>
+<h1 data-text="Join_On_DarkTools_In_Your_Email">Join_On_DarkTools_In_Your_Email</h1>
+            <form>
+                <div class='main'>
+                    <div class="input-group flex-nowrap">
+                        <span style="color: red" class="input-group-text" id="addon-wrapping">Type Your Email____</span>
+                        <input type="text"
+                               class="form-control"
+                               placeholder="xyz@gmail.com"
+                               aria-label="Username"
+                               aria-describedby="addon-wrapping"
+                               name='email'
+                               id='email'>
+                               
+                    </div>
+                    <div class="input-group flex-nowrap">
+                        <span style='color: red' class="input-group-text" id="addon-wrapping">Type Your Username</span>
+                        <input type="text"
+                               name='username'
+                               id='username'
+                               class="form-control"
+                               placeholder="Username"
+                               aria-label="Username"
+                               aria-describedby="addon-wrapping">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="sendemail()"> Submit</button>
+                </div>
+            </form>
+        </div>
+  
+<script>
+        function sendemail(){
+            var body =document.querySelector("#username").value;
+           var to= document.querySelector("#email").value;
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "funt8207@gmail.com",
+                Password : "vishal@1234",
+                To :to,
+                From : "funt8207@gmail.com",
+                Subject : "Welcome to DarkTools",
+                Body :"<h1 style='text-align: center;'>" + "welcome to funtech "+body+"</h1>" +"</br>"+ "so i hope you are doing well we will create something new for you soon for fun"+"</br>"+"<p style='text-align: right;'> "+"thanks for visiting" +"</p>"
+            }).then(
+              message => alert(message)
+            );
+            //console.log(body,to);
+        }
+</script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<br><br>
       <div class="photo">
     <a href="https://t.me/Eyey3"><img src="admin.gif"/></a> </div>
     <div class="photo">
     <a href="https://t.me/Eyey3"><img src="djhvhuvvfub.png"/></a></div>
-     <pre>              &copy; copy right 2022</pre> 
+     <pre> &copy; copy right 2022</pre> 
